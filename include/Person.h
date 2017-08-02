@@ -31,7 +31,7 @@ public:
     virtual void SetAge(int age) { m_Age = age; }
     virtual void SetState(PersonState state) { m_State = state; }
 
-private:
+protected:
     string m_Name;
     int m_Age;
     PersonState m_State;

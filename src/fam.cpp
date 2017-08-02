@@ -20,6 +20,8 @@ int main() {
 
     tree.AddRelative(relative);
 
+    RelItPair testDad = tree.FindRelative(Relative::FATHER);
+    RelItPair testMom = tree.FindRelative(Relative::MOTHER);
     cout << "hello world end" << endl;
 
     return 0;

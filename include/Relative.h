@@ -5,6 +5,7 @@
 
 #include "Person.h"
 #include <string>
+#include <tuple>
 
 using namespace std;
 
@@ -35,12 +36,20 @@ public:
         Person("", 0, Person::DECEASED),
         m_Relationship(Relative::MOTHER) {}
     ~Relative() {}
+
+    bool operator==(const Relative & rhs) { 
+        return (tie(this->m_Name, this->m_Age, this->m_State, this->m_Relationship) ==
+                tie(rhs.m_Name, rhs.m_Age, rhs.m_State, rhs.m_Relationship));
+    }
+    bool operator!=(const Relative & rhs) { 
+        return !(*this == rhs); 
+    }
     
     Relationship GetRelationship() { return m_Relationship; }
 
     void SetRelationship(Relationship relationship) { m_Relationship = relationship; }
 
-private:
+protected:
     Relative::Relationship m_Relationship;
 };
 

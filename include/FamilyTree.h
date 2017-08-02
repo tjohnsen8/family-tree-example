@@ -8,6 +8,10 @@
 
 using namespace std;
 
+typedef multimap<Relative::Relationship, Relative> FamilyMap;
+typedef FamilyMap::iterator RelativeIterator;
+typedef pair<RelativeIterator, RelativeIterator> RelItPair;
+
 class FamilyTree
 {
 public:
@@ -15,10 +19,10 @@ public:
     ~FamilyTree();
 
     void AddRelative(Relative & relative);
-    Relative & FindRelative(Relative::Relationship relationship);
+    RelItPair FindRelative(Relative::Relationship relationship);
 
 private:
-    map<Relative::Relationship, Relative> m_Relatives;
+    FamilyMap m_Relatives;
 };
 
 #endif
