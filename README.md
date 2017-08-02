@@ -1,6 +1,6 @@
-###Family Tree data structure example
+### Family Tree data structure example
 
-##Structure
+## Structure
 - CMakeLists
 - README
 - include
@@ -13,12 +13,13 @@
 - bin
 - build
 
-##To build
+## To build
+Linux build:
 ```
 cd build
 cmake ..
 make
 ```
 
-##To run
+## To run
 ./famtree
