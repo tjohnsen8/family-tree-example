@@ -22,7 +22,9 @@ int main() {
 
     RelItPair testDad = tree.FindRelative(Relative::FATHER);
     RelItPair testMom = tree.FindRelative(Relative::MOTHER);
-    cout << "hello world end" << endl;
+
+    cout << "found " << distance(testDad.first, testDad.second) << " FATHER(s) " << endl;
+    cout << "found " << distance(testMom.first, testMom.second) << " MOTHER(s) " << endl;
 
     return 0;
 }
